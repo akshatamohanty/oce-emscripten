@@ -1,0 +1,23 @@
+# !!!! This file is generated automatically, do not edit manually! See end script
+puts "TODO CR23096 ALL: TPSTAT : Faulty" 
+puts "TODO CR23096 ALL: CHECKSHAPE : Faulty" 
+puts "TODO CR23096 ALL: STATSHAPE : Faulty" 
+
+set LinuxDiff 3
+set filename Z8M6SAT.stp
+
+set ref_data {
+DATA        : Faulties = 0  ( 0 )  Warnings = 0  ( 0 )  Summary  = 0  ( 0 )
+TPSTAT      : Faulties = 9  ( 0 )  Warnings = 928  ( 3166 )  Summary  = 937  ( 3166 )
+CHECKSHAPE  : Wires    = 47  ( 42 )  Faces    = 45  ( 43 )  Shells   = 0  ( 4 )   Solids   = 0 ( 0 )
+NBSHAPES    : Solid    = 28  ( 28 )  Shell    = 772  ( 36 )  Face     = 3246  ( 3245 )   Summary  = 29529  ( 28705 )
+STATSHAPE   : Solid    = 28  ( 28 )  Shell    = 772  ( 36 )  Face     = 3246  ( 3245 )   FreeWire = 0  ( 0 )   FreeEdge  = 0 ( 0 )   SharedEdge = 12672  ( 12614 )
+TOLERANCE   : MaxTol   =    15.00025501  (    20.46526799 )  AvgTol   =    0.0249955933  (   0.03758716993 )
+LABELS      : N0Labels = 3  ( 3 )  N1Labels = 2  ( 2 )  N2Labels = 0  ( 0 )   TotalLabels = 5  ( 5 )   NameLabels = 5  ( 5 )   ColorLabels = 0  ( 0 )   LayerLabels = 0  ( 0 )
+PROPS       : Centroid = 0  ( 0 )  Volume   = 0  ( 0 )  Area     = 0  ( 0 )
+NCOLORS     : NColors  = 0  ( 0 )
+COLORS      : Colors   =   (  )
+NLAYERS     : NLayers  = 0  ( 0 )
+LAYERS      : Layers   =   (  )
+
+}

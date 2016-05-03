@@ -1,0 +1,63 @@
+typedef double Standard_Real;
+typedef boolean Standard_Boolean;
+
+// tesselator for visualization
+interface Tesselator{
+	void Tesselator([Const,Ref] TopoDS_Shape aShape);
+	DOMString ExportShapeToThreejs();
+};
+
+// BRepMesh_IncrementalMesh.hxx
+interface BRepMesh_IncrementalMesh{
+	// constructor automatically call to perform meshing
+	void BRepMesh_IncrementalMesh([Const, Ref] TopoDS_Shape theShape, [Const] Standard_Real theLinDeflection);
+};
+
+// has to be exposed - because tesselator will take topods_shape
+interface TopoDS_Shape{
+	
+};
+
+interface Mobius{
+	void Mobius();
+	[Ref]TopoDS_Shape MakeBottle([Const] Standard_Real myWidth, [Const] Standard_Real myHeight,
+                        [Const] Standard_Real myThickness);
+	[Ref]TopoDS_Shape MakeBox();
+	[Ref]TopoDS_Shape MakeCylinder();
+	[Ref]TopoDS_Shape booleanOp([Const, Ref]TopoDS_Shape obj1, [Const, Ref]TopoDS_Shape obj2);
+};
+
+interface Geometry{
+};
+
+interface GeomCurve{
+};
+GeomCurve implements Geometry;
+
+interface GeomLineSegment{
+	void GeomLineSegment();
+};
+GeomLineSegment implements GeomCurve;
+
+
+interface Toposhape{
+	Standard_Boolean canBeExtruded();
+};
+
+interface Topoedge{
+	void Topoedge();
+};
+Topoedge implements Toposhape;
+
+interface Topowire{
+	void Topowire();
+};
+Topowire implements Toposhape;
+
+interface Topoface{
+	void Topoface();
+};
+Topoface implements Toposhape;
+
+
+

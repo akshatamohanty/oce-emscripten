@@ -1,0 +1,3 @@
+#include <TopoDS_Shape.hxx>
+#include <BOPAlgo_PaveFiller.hxx>
+#include <BRepAlgoAPI_Cut.hxx>

@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+class MobiusOCE{
+
+
+};
+
+class Toposhape: public MobiusOCE
+{
+
+};
+
+// Subclass wire
+class Wire: public Toposhape
+{
+	public:
+	STANDARD_EXPORT Wire();
+		
+};
+
+STANDARD_EXPORT Wire(){
+	
+};
+
+// subclass face
+class Face: public Toposhape
+{
+	public:
+	STANDARD_EXPORT Face();
+	STANDARD_EXPORT Face( Wire wire );
+		
+};
+
+STANDARD_EXPORT Face(){
+	
+};
+
+STANDARD_EXPORT Face( Wire wire ){
+	
+	// change wire to face
+
+};

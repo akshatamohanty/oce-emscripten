@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+class Rectangle{
+
+	double height, width;
+	public:
+	void set_values(double, double);
+	double area() { return width*height; };
+};
+
+void Rectangle::set_values( double x, double y ){
+	width = x;
+	height = y;
+};
+
+
+	

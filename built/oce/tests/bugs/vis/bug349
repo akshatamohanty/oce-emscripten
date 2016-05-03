@@ -1,0 +1,102 @@
+puts "========"
+puts "OCC349"
+puts "1. Hidden line removal algorithm works incorrect in the perspective view"
+puts "========"
+
+vinit
+box b 100 900 300
+set 3dviewer 1
+vdisplay b
+
+OCC280 1 0
+
+vfit
+
+set x1 135
+set y1 119
+
+set x2 387
+set y2 33
+
+set x3 172
+set y3 144
+
+set x4 28
+set y4 190
+
+set x5 160
+set y5 257
+
+set x6 365
+set y6 150
+
+set x7 212
+set y7 272
+
+set x8 60
+set y8 343
+
+set x9 26
+set y9 255
+
+set x10 353
+set y10 99
+
+set x11 389
+set y11 113
+
+set x12 60
+set y12 276
+
+#
+#              ___________2________________
+#             /|                          /|
+#            / |                         / |
+#           /  |                        /  |
+#          /   |                       /   |
+#         /    |                      /    |
+#        1     |                     3     |
+#       /      |                    /      |
+#      /       |                   /       |
+#     /        |                  /        |
+#    /         |                 /         |
+#   ----------------4------------          |
+#   |          |                |          |
+#   |          |                |          |
+#   |          |                |          |
+#   |         10                |         11
+#   |          |                |          |
+#   |          |                |          |
+#   |          |                |          |
+#   |          |                |          |
+#   |          |                |          |
+#   9          |               12          |
+#   |          |___________6____|__________|
+#   |         /                 |         /
+#   |        /                  |        /
+#   |       /                   |       /
+#   |      /                    |      /
+#   |     5                     |     /
+#   |    /                      |    7
+#   |   /                       |   /
+#   |  /                        |  /
+#   | /                         | /
+#   |/                          |/
+#   |--------------8------------|
+#
+#
+
+checkcolor ${x1} ${y1} 1 1 0
+checkcolor ${x2} ${y2} 1 1 0
+checkcolor ${x3} ${y3} 1 1 0
+checkcolor ${x4} ${y4} 1 1 0
+checkcolor ${x7} ${y7} 1 1 0
+checkcolor ${x8} ${y8} 1 1 0
+checkcolor ${x9} ${y9} 1 1 0
+checkcolor ${x11} ${y11} 1 1 0
+checkcolor ${x12} ${y12} 1 1 0
+checkcolor ${x5} ${y5} 0 0 0
+checkcolor ${x6} ${y6} 0 0 0
+checkcolor ${x10} ${y10} 0 0 0
+
+set only_screen 1

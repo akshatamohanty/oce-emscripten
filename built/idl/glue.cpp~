@@ -1,0 +1,72 @@
+
+#include <emscripten.h>
+
+extern "C" {
+
+// Not using size_t for array indices as the values used by the javascript code are signed.
+void array_bounds_check(const int array_size, const int array_idx) {
+  if (array_idx < 0 || array_idx >= array_size) {
+    EM_ASM_INT({
+      throw 'Array index ' + $0 + ' out of bounds: [0,' + $1 + ')';
+    }, array_idx, array_size);
+  }
+}
+
+// Toposhape
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Toposhape___destroy___0(Toposhape* self) {
+  delete self;
+}
+
+// Topoface
+
+Topoface* EMSCRIPTEN_KEEPALIVE emscripten_bind_Topoface_Topoface_0() {
+  return new Topoface();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Topoface___destroy___0(Topoface* self) {
+  delete self;
+}
+
+// MobiusOCE
+
+MobiusOCE* EMSCRIPTEN_KEEPALIVE emscripten_bind_MobiusOCE_MobiusOCE_0() {
+  return new MobiusOCE();
+}
+
+MobiusOCE* EMSCRIPTEN_KEEPALIVE emscripten_bind_MobiusOCE_MobiusOCE_1(Toposhape* arg0) {
+  return new MobiusOCE(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_MobiusOCE___destroy___0(MobiusOCE* self) {
+  delete self;
+}
+
+// Topowire
+
+Topowire* EMSCRIPTEN_KEEPALIVE emscripten_bind_Topowire_Topowire_0() {
+  return new Topowire();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Topowire___destroy___0(Topowire* self) {
+  delete self;
+}
+
+// VoidPtr
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_VoidPtr___destroy___0(void** self) {
+  delete self;
+}
+
+// Topoedge
+
+Topoedge* EMSCRIPTEN_KEEPALIVE emscripten_bind_Topoedge_Topoedge_0() {
+  return new Topoedge();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Topoedge___destroy___0(Topoedge* self) {
+  delete self;
+}
+
+}
+
