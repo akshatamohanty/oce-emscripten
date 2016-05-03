@@ -146,6 +146,7 @@ class T_Face: public Topology
 
 	// Functions used internally
 	TopoDS_Face& getNativeFace();
+	T_Face& offsetFace();
 	//TopoDS_Shape& visualize();
 };
 

@@ -34,9 +34,10 @@
 	var obj = mobius.MakePolygon(vertex1, vertex2, vertex3, vertex4);  console.log("Polygon Face (T-Face)", obj); // will return a T_Face
 	var object = obj.visualize(); console.log("For visualization of Polygon: (TopoDS_Shape))", object); // will return a topo_ds object
 	var extrusion = obj.extrude(0,10,0); //y is vertically up console.log("Extrusion (T_Solid):", extrusion);
-	//var cylinder = mobius.MakeCylinder(5.0, 10.0); console.log("Cylinder should return T_Solid", cylinder);
-	//var b = cylinder.booleanOp(extrusion);console.log("Boolean: (TopoDS_Shape)", b);
-	tess = new oce.Tesselator(extrusion);
+	var cylinder = mobius.MakeCylinder(5.0, 10.0); console.log("Cylinder should return T_Solid", cylinder);
+	var box = mobius.MakeBox(10.0, 10.0, 10.0); console.log("Box should reture T_Solid", box);
+	var b = cylinder.booleanOp(box);console.log("Boolean: (TopoDS_Shape)", b);
+	tess = new oce.Tesselator(b);
 	data = tess.ExportShapeToThreejs()
 	eval(data);
 

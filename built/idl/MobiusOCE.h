@@ -82,6 +82,7 @@ class T_Face: public Topology
 	T_Solid& extrude(const Standard_Real x, const Standard_Real y, const Standard_Real z);
 
 	TopoDS_Face& getNativeFace();
+	T_Face& offsetFace();
 	//TopoDS_Shape& visualize();
 };
 

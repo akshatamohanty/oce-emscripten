@@ -146,6 +146,7 @@ class T_Face: public Topology
 
 	// Functions used internally
 	TopoDS_Face& getNativeFace();
+	T_Face& offsetFace();
 	//TopoDS_Shape& visualize();
 };
 
@@ -226,6 +227,6 @@ T_Solid& Mobius::MakeCylinder(const Standard_Real radius, const Standard_Real he
 	TopoDS_Shape cylinder = cylinderMaker.Shape();
 	static T_Solid mySolid(cylinder);
 	return mySolid;
-}
+};
 
 
